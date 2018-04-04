@@ -1,4 +1,5 @@
-import os
+#!/usr/bin/env python
+
 from PIL import Image
 import numpy as np
 from matplotlib import pyplot as plt

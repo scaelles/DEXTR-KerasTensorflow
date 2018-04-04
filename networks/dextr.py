@@ -9,6 +9,7 @@ from networks import resnet
 
 from mypath import Path
 
+
 class DEXTR(object):
     """Pyramid Scene Parsing Network by Hengshuang Zhao et al 2017"""
 

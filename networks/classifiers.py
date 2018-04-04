@@ -98,26 +98,3 @@ def build_pyramid_pooling_module(res, input_shape, nb_classes, sigmoid=False, ou
     if sigmoid:
         x = Activation('sigmoid')(x)
     return x
-
-
-def build_atrous_pooling_module(res, nb_classes, sigmoid=False, output_size=None):
-    dilations = [6, 12, 18, 24]
-    """Build the Atrous Pyramid Module."""
-    names = ["class_atrous_1_conv",
-             "class_atrous_2_conv",
-             "class_atrous_3_conv",
-             "class_atrous_4_conv"]
-    atrous_1 = Conv2D(nb_classes, (3, 3), strides=(1, 1), padding='same', name=names[0], dilation_rate=dilations[0], use_bias=True)(res)
-    atrous_2 = Conv2D(nb_classes, (3, 3), strides=(1, 1), padding='same', name=names[1], dilation_rate=dilations[1], use_bias=True)(res)
-    atrous_3 = Conv2D(nb_classes, (3, 3), strides=(1, 1), padding='same', name=names[2], dilation_rate=dilations[2], use_bias=True)(res)
-    atrous_4 = Conv2D(nb_classes, (3, 3), strides=(1, 1), padding='same', name=names[3], dilation_rate=dilations[3], use_bias=True)(res)
-
-    res = Add()([atrous_1,
-                 atrous_2,
-                 atrous_3,
-                 atrous_4])
-    if output_size:
-        res = Upsampling(output_size)(res)
-    if sigmoid:
-        res = Activation('sigmoid')(res)
-    return res
