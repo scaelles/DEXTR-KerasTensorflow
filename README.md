@@ -44,7 +44,7 @@ The code was tested with [Miniconda](https://conda.io/miniconda.html) and Python
     ```Shell
     python demo.py
     ```
-    If you are using a GPU specify which one should be used (for example gpu with id 0):
+    If you have multiple GPUs, you can specify which one should be used (for example gpu with id 0):
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python demo.py
     ```
