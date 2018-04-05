@@ -13,30 +13,41 @@ The code was tested with [Miniconda](https://conda.io/miniconda.html) and Python
 
 
 0. Clone the repo:
-  ```Shell
-  git clone https://github.com/scaelles/DEXTR-KerasTensorflow
-  cd DEXTR-KerasTensorflow
-  ```
+    ```Shell
+    git clone https://github.com/scaelles/DEXTR-KerasTensorflow
+    cd DEXTR-KerasTensorflow
+    ```
  
 1. Install dependencies:
-  ```Shell
-  conda install matplotlib opencv pillow scikit-learn scikit-image
-  pip install tensorflow keras
-  ```
+    ```Shell
+    conda install matplotlib opencv pillow scikit-learn scikit-image h5py
+    ```
+    For CPU mode (tested in tensorflow versions 1.4 and 1.7):
+    ```Shell
+    pip install tensorflow keras
+    ```
+    For GPU mode (tested in tensorflow-gpu verion 1.4):
+    ```Shell
+    pip install tensorflow-gpu keras
+    ```
   
 2. Download the model by running the script inside ```models/```:
-  ```Shell
-  cd models/
-  chmod +x download_dextr_model.sh
-  ./download_dextr_model.sh
-  cd ..
-  ```
-  The default model is trained on PASCAL VOC Segmentation train + SBD (10582 images). To download models trained on PASCAL VOC Segmentation train or COCO, please visit our [project page](http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/#downloads), or keep scrolling till the end of this README.
+    ```Shell
+    cd models/
+    chmod +x download_dextr_model.sh
+    ./download_dextr_model.sh
+    cd ..
+    ```
+    The default model is trained on PASCAL VOC Segmentation train + SBD (10582 images). To download models trained on PASCAL VOC Segmentation train or COCO, please visit our [project page](http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/#downloads), or keep scrolling till the end of this README.
 
 3. To try the demo version of DEXTR, please run:
-  ```Shell
-  python demo.py
-  ```
+    ```Shell
+    python demo.py
+    ```
+    If you are using a GPU specify which one should be used (for example gpu with id 0):
+    ```Shell
+    CUDA_VISIBLE_DEVICES=0 python demo.py
+    ```
 If installed correctly, the result should look like this:
 <p align="center"><img src="doc/github_teaser.gif" align="center" width=480 height=auto/></p>
 
@@ -66,6 +77,6 @@ If you use this code, please consider citing the following papers:
 	}
 
 
-We thank the authors of [PSPNet-Keras-tensorflow](https://github.com/Vladkryvoruchko/PSPNet-Keras-tensorflow) for making their PyTorch re-implementation of PSPNet available!
+We thank the authors of [PSPNet-Keras-tensorflow](https://github.com/Vladkryvoruchko/PSPNet-Keras-tensorflow) for making their Keras re-implementation of PSPNet available!
 
 If you encounter any problems please contact us at {kmaninis, scaelles}@vision.ee.ethz.ch.
