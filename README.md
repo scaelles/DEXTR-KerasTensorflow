@@ -26,7 +26,7 @@ The code was tested with [Miniconda](https://conda.io/miniconda.html) and Python
     ```Shell
     pip install tensorflow keras
     ```
-    For GPU mode (check additional dependencies [here](https://www.tensorflow.org/install/install_linux)):
+    For GPU mode (check additional dependencies [here](https://www.tensorflow.org/install/)):
     ```Shell
     pip install tensorflow-gpu keras
     ```
