@@ -22,11 +22,11 @@ The code was tested with [Miniconda](https://conda.io/miniconda.html) and Python
     ```Shell
     conda install matplotlib opencv pillow scikit-learn scikit-image h5py
     ```
-    For CPU mode (tested in tensorflow versions 1.4 and 1.7):
+    For CPU mode:
     ```Shell
     pip install tensorflow keras
     ```
-    For GPU mode (tested in tensorflow-gpu verion 1.4):
+    For GPU mode (check additional dependencies [here](https://www.tensorflow.org/install/install_linux)):
     ```Shell
     pip install tensorflow-gpu keras
     ```
