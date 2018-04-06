@@ -26,10 +26,11 @@ The code was tested with [Miniconda](https://conda.io/miniconda.html) and Python
     ```Shell
     pip install tensorflow keras
     ```
-    For GPU mode (check additional dependencies [here](https://www.tensorflow.org/install/)):
+    For GPU mode (CUDA 9.0 and cuDNN 7.0 is required for the latest Tensorflow version. If you have CUDA 8.0 and cuDNN 6.0 installed, force the installation of the vesion 1.4 by using ```tensorflow-gpu==1.4```. More information [here](https://www.tensorflow.org/install/)):
     ```Shell
     pip install tensorflow-gpu keras
     ```
+    
   
 2. Download the model by running the script inside ```models/```:
     ```Shell
