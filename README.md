@@ -1,7 +1,4 @@
 # Deep Extreme Cut (DEXTR)
-
-![Python 3](https://img.shields.io/badge/Python-3.6-green.svg?longCache=true&style=for-the-badge)
-
 Visit our [project page](http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr) for accessing the paper, and the pre-computed results.
 
 ![DEXTR](doc/dextr.png)
