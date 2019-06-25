@@ -59,6 +59,12 @@ We provide the following DEXTR models, pre-trained on:
   * [PASCAL + SBD](https://data.vision.ee.ethz.ch/csergi/share/DEXTR/dextr_pascal-sbd.h5), trained on PASCAL VOC Segmentation train + SBD (10582 images). Achieves mIoU of 91.5% on PASCAL VOC Segmentation val.
   * [PASCAL](https://data.vision.ee.ethz.ch/csergi/share/DEXTR/dextr_pascal.h5), trained on PASCAL VOC Segmentation train (1464 images). Achieves mIoU of 90.5% on PASCAL VOC Segmentation val.
   * [COCO](https://data.vision.ee.ethz.ch/csergi/share/DEXTR/dextr_coco.h5), trained on COCO train 2014 (82783 images). Achieves mIoU of 87.8% on PASCAL VOC Segmentation val.
+  
+### Annotation tool
+[@karan-shr](https://github.com/karan-shr) has built an annotation tool based on DEXTR, which you can find here:
+```
+https://github.com/karan-shr/DEXTR-AnnoTool
+```
 
 ### Citation
 If you use this code, please consider citing the following papers:
